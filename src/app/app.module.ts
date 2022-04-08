@@ -2,9 +2,14 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { CurrencyMaskModule } from "ngx-currency-mask";
+import { NgxCurrencyModule } from 'ngx-currency';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { AppComponent } from './app.component';
 import { CalculadoraImcComponent } from './calculadora-imc/calculadora-imc.component';
+
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
 
 @NgModule({
   declarations: [
@@ -16,7 +21,8 @@ import { CalculadoraImcComponent } from './calculadora-imc/calculadora-imc.compo
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    CurrencyMaskModule,
+    NgxCurrencyModule,
+    NgxMaskModule.forRoot(maskConfig),
     
   ],
   providers: [],

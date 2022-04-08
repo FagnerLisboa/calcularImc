@@ -4,15 +4,17 @@
     <div class="title">IMC</div><br>
     <div>
         <label for="">Nome:</label>
-        <input [(ngModel)]="nome" type="text" id="nome" name="nome" placeholder="Nome">
+        <input [(ngModel)]="nome" type="text" id="nome" name="nome" placeholder="Nome"/>
     </div><br>
     <div>
         <label for="">Peso:</label>
-        <input [(ngModel)]="peso" type="number" id="peso" name="peso" placeholder="Peso" >
+        <input [(ngModel)]="peso" type="number" id="peso" name="peso" placeholder="Peso"/>
     </div><br>
     <div>
         <label for="">Altura:</label>
-        <input [(ngModel)]="altura" type="number" id="altura" name="altura" placeholder="Altura">
+        <input [(ngModel)]="altura" type="number" id="altura" name="altura" placeholder="Altura"
+        />  
+        <!-- mask="separator.2" thousandSeparator="." />  -->
         
     </div><br>
     <button (click)="imc()"class="" type="button" value="">Calcular</button>

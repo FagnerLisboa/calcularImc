@@ -1,4 +1,3 @@
-import { ParseSourceFile } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculadora-imc.component.css']
 })
 
-
 export class CalculadoraImcComponent implements OnInit {
   public nome!: string
   public peso!: number
@@ -15,7 +13,7 @@ export class CalculadoraImcComponent implements OnInit {
   public valorIMC!: string
   public resultado!: string
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
@@ -24,7 +22,7 @@ export class CalculadoraImcComponent implements OnInit {
 
     if (this.altura && this.peso) {
 
-      const valorIMC = (this.peso / (this.altura * 2));
+      const valorIMC = (this.peso / (this.altura * this.altura));
 
       if (valorIMC < 18.5) {
         this.resultado = 'abaixo do peso.';
